@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"></script>
+
+
+</head>
+<body>
+    <div class="main_content">
+        <h1> PocketPlanner</h1>
+        <section class="form-section">
+            <div class="add">
+                    <h2>Add to Budget </h2>
+                <form id="expense-form">
+                <input type="text" id="expense-name" placeholder="Expense Name" required>
+                <input type="number" id="expense-amount" placeholder="Amount" required>
+                <input type="date" id="expense-date" required>
+                <!-- <button type="submit" class="btn-primary">Add Expense</button> -->
+                <button type="button" class="btn btn-outline-info">Add Expense</button>
+
+                </form>
+            </section>
+            <section >
+                <h2> Categorize Spending</h2>
+                <div class="filters">
+                    <select id="month-filter" >
+                    <option value="">Filter by Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                    </select>
+                    <input type="number" id="year-filter" placeholder="Enter Year" >
+                    <button id="filter-btn" class="btn-secondary">Filter</button>
+                    <button id="reset-btn" class="btn-secondary">Reset</button>
+                </div>
+          </section>
+            </div>
+          <section class="table-section">
+            <h2>Expenses</h2>
+            <table id="expense-table" border="black">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </section>
+          <!-- <section>
+            <button type="button"> Total Expense </button>
+          </section> -->
+    </div>
+    <script src="project.js"></script>
+</body>
+</html>
